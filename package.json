@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/SpinnerMaster/EVE-Multi-Ping#readme",
   "devDependencies": {
+    "fs": "0.0.1-security",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
-  }
+  },
+  "dependencies": {}
 }

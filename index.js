@@ -1,5 +1,3 @@
-var fs = require('fs');
-
 //-----the Discord function-----
     function sendMessage() {
 //	  sendSlack();
