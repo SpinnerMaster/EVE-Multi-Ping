@@ -42,7 +42,6 @@ function sendMessage() {
     };
 
   var request = new XMLHttpRequest();
-
   var pingText = {
 	    title: "New ping!",
 		  description: (alertLevel + ' ' + sentence),
@@ -53,42 +52,50 @@ function sendMessage() {
         description: (":thinking:" + " " + alarmaText),
         color: (hexSet)
     };
+
 //INSERT URL FOR DISCORD IN THE QUOTES
   request.open("POST", "");
+
   request.setRequestHeader('Content-type', 'application/json');
 
   var params = {
-		username: "Pingbot 2K20",
+		username: "Pingbot 2K20 Mk 2",
 		embeds: [ pingText, alarmaHack ]
 		}
       request.send(JSON.stringify(params));
     };
 
 //-----the Slack function-----
-	function sendSlack() {
-	  var sentence = document.getElementById("pingText").value;
-    var color = document.getElementById("pPriority");
-    var colorVal = color.options[color.selectedIndex].value;
-    var alarmaText = " ";
-    var alarma = document.getElementById("alarma").checked;
-    if (alarma == true) {
+function sendSlack() {
+  var sentence = document.getElementById("pingText").value;
+  var color = document.getElementById("pPriority");
+  var colorVal = color.options[color.selectedIndex].value;
+  var alarmaText = " ";
+  var alarma = document.getElementById("alarma").checked;
+
+  if (alarma == true) {
     alarmaText = ":frogsiren: :frogsiren: :frogsiren: :frogsiren:"
     } else if (alarma == false) {
     alarmaText = ""
     };
-    var alertLevel = "";
-    if (colorVal == "low") {
+
+  var alertLevel = "";
+
+  if (colorVal == "low") {
     alertLevel = "here"
     } else if (colorVal == "high") {
     alertLevel = "channel"
     } else if (colorVal == "critical") {
     alertLevel = "everyone"
     };
-    var request = new XMLHttpRequest();
+
+  var request = new XMLHttpRequest();
+
 //INSERT URL FOR SLACK IN THE QUOTES
-    request.open("POST", "");
-	  var params = {
-      "text": "New Ping!",
+  request.open("POST", "");
+
+  var params = {
+    "text": "New Ping!",
       "blocks": [
           {
               "type": "section",
@@ -106,6 +113,6 @@ function sendMessage() {
             }
           ]
 		}
-		console.log(params)
-        request.send(JSON.stringify(params));
-	}
+  console.log(params)
+  request.send(JSON.stringify(params));
+};
