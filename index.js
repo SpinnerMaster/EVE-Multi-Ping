@@ -1,6 +1,8 @@
+var fs = require('fs');
+
 //-----the Discord function-----
     function sendMessage() {
-	  sendSlack();
+//	  sendSlack();
 	  var sentence = document.getElementById("pingText").value;
 	  var color = document.getElementById("pPriority");
 	  var colorVal = color.options[color.selectedIndex].value;
@@ -47,7 +49,7 @@
         color: (hexSet)
     }
 //INSERT URL FOR DISCORD IN THE QUOTES
-      request.open("POST", "");
+      request.open("POST", "https://discordapp.com/api/webhooks/708135837560209428/ReZIvRXFea-vpTJpvFpgogLXENAl0cgMeiLtNDMLGkwNeGQrBhUfphf761BJ2c5LMSz0");
       request.setRequestHeader('Content-type', 'application/json');
 	  var params = {
 		username: "Pingbot 2K20",
