@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVE-Multi-Ping</title>
+  </head>
+  <body style="background-color:#3b3e4e;">
+	<textarea id="pingText" rows="4" cols="50"></textarea>
+	<br>
+    <p><b>Select Ping Priority:</b></p>
+	<select required id="pPriority">
+		<option value="low">Low Priority (@here)</option>
+		<option value="high">High Priority (@channel)</option>
+		<option value="critical">Critical Priority (@everyone)</option>
+	</select>
+	<p><b>Alarma?</b></p>
+	<input type="checkbox" id="alarma" name="alarma" value="ALARMA!!!">
+	<label for="alarma">ALARMA!!</label><br>
+	<br>
+  <script type="text/javascript" src="index.js"></script>
+  <button onclick="sendMessage()">Send</button>
+  </body>
+</html>

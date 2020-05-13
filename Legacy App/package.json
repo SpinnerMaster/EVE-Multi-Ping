@@ -1,0 +1,31 @@
+{
+  "name": "eve-multi-ping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpinnerMaster/EVE-Multi-Ping.git"
+  },
+  "author": "SpinnerMaster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SpinnerMaster/EVE-Multi-Ping/issues"
+  },
+  "homepage": "https://github.com/SpinnerMaster/EVE-Multi-Ping#readme",
+  "devDependencies": {
+    "browserify": "^16.5.1",
+    "fs": "0.0.1-security",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "-": "0.0.1",
+    "brfs": "^2.0.2",
+    "config": "^3.3.1",
+    "empty": "^0.10.1"
+  }
+}
